@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row">
+        <h3>Suggested Trips</h3>
+    </div>
+    <!--Map & Pictures-->
+    <div class="row">
+        <div class="col">
+            <div id="map"></div>
+        </div>
+        <div class="col">
+            <div class="card" style="width: 18rem;">
+                <img src="<%= image%>" class="card-img-top" alt="...">
+              </div>
+        </div>
+    </div>
+
+    <!--Flight Details-->
+    <div class="row">
+        <div class="p-5 mb-4 bg-light rounded-3">
+            <div class="container-fluid py-5">
+                <h3>Flight Details</h3>
+                <table class="table">
+                    <thead>
+                        <th>Origin</th>
+                        <th>Dest</th>
+                        <th>Departure</th>
+                        <th>Return</th>
+                        <th>Price</th>
+                    </thead>
+                <tbody>
+                    <% for(var i = 0; i < Math.min(flightData.length,5); i++) { %>
+                        <tr>
+                                <td>
+                                 <%= flightData[i].origin %> 
+                                </td>
+                                <td>
+                                 <%= flightData[i].destination %> 
+                                </td>
+                                <td>
+                                    <%= flightData[i].departureDate %> 
+                                </td>
+                                <td>
+                                    <%= flightData[i].returnDate %> 
+                                </td>
+                                <td>
+                                    $<%= flightData[i].price.total %> 
+                                </td>
+                                <td>
+                                    <a href="#">View on Map</a> 
+                                </td>
+                        </tr>
+                    <% }; %>
+                </tbody>
+            </table>
+    
+            </div>
+          </div>
+    </div>
+</div>

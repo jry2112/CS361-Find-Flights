@@ -1,0 +1,19 @@
+{
+  "name": "imageservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jada Young",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cross-fetch": "^3.1.5",
+    "express": "^4.17.2",
+    "morgan": "^1.10.0",
+    "node-fetch": "^2.6.7",
+    "path": "^0.12.7"
+  }
+}

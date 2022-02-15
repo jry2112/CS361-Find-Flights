@@ -1,0 +1,141 @@
+<body>
+  <main>
+    <!--Header Section-->
+    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+      <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+        <div class="my-3 py-3">
+          <h1 class="display-5">Find Great Flight Deals Today</h1>
+          <p class="lead">Scroll Down to Start Saving</p>
+        </div>
+        <div style="max-width: 100%">
+          <figure>
+            <img src="images/plane-cover.jpg" class="img-fluid" alt="plane above earth">
+            <figcaption>by <a href="https://unsplash.com/@tombrunberg?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Tom Brunberg</a> on <a href="https://unsplash.com/s/photos/flights?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></figcaption>
+          </figure>        
+        </div>
+      </div>
+    </div>
+
+<!--Search Section-->
+    <div class="card-body">
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <button class="nav-link active mb-3" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
+            <i class="fas me-2"></i>Search by Origin
+          </button>
+          <button class="nav-link mb-3" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
+            <i class="fas me-2"></i>View Deals</button></div>
+      </nav>
+      <div class="tab-content mt-3" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+          <p>Enter an IATA or select a location on the map to autosearch.</p>
+          <form class="row align-items-center" action="/deals/search" method="GET">
+              <input id="pac-input" name="originIATA" class="controls form-control" type="text" placeholder="Enter an airport IATA code (NYC, PDX, etc)"/ maxlength="3">
+              <button class="btn btn-danger" type="submit">Find Deal</button>
+              <div id="map"></div>
+          </form>
+        </div>
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+          <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 justify-content-center">
+            <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+              <div class="my-3 py-3">
+                <h2 class="display-5">Current Deals</h2>
+                <table class="table table-borderless text-white">
+                  <thead>
+                    <tr>
+                      <th scope="col">Origin</th>
+                      <th scope="col">Destination</th>
+                      <th scope="col">Price</th>
+                      <th scope="col">Details</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>JFK</th>
+                      <td>LAX</td>
+                      <td>$250</td>
+                      <td><a href="">flights</a></td>
+                    </tr>
+                    <tr>
+                      <td>JFK</th>
+                      <td>LAX</td>
+                      <td>$250</td>
+                      <td><a href="">flights</a></td>
+                    </tr>
+                    <tr>
+                      <td>JFK</th>
+                      <td>LAX</td>
+                      <td>$250</td>
+                      <td><a href="">flights</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>      
+          </div>
+      
+        </div>
+      </div>
+
+      <!--Image Section-->
+      <div class="container px-4 py-5" id="custom-cards">
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+          <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-1.jpg');">
+              <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Sample Image 1</h2>
+                <ul class="d-flex list-unstyled mt-auto">
+                  <li class="me-auto">
+                    <img src="" alt="" width="32" height="32" class="rounded-circle border border-white">
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-2.jpg');">
+              <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps to multiple lines</h2>
+                <ul class="d-flex list-unstyled mt-auto">
+                  <li class="me-auto">
+                    <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                  </li>
+                  <li class="d-flex align-items-center me-3">
+                    <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                    <small>Pakistan</small>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                    <small>4d</small>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('unsplash-photo-3.jpg');">
+              <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+                <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here</h2>
+                <ul class="d-flex list-unstyled mt-auto">
+                  <li class="me-auto">
+                    <img src="https://github.com/twbs.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                  </li>
+                  <li class="d-flex align-items-center me-3">
+                    <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                    <small>California</small>
+                  </li>
+                  <li class="d-flex align-items-center">
+                    <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                    <small>5d</small>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  </main>
+</body>
