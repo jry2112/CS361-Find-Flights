@@ -2,7 +2,8 @@
 module.exports = (app) => {
   // Gets Images from Unsplash
   const getImage = async (search) => {
-    const response = await fetch(`https://api.unsplash.com/photos/?client_id=LaLRbCj9nu7xOtOcHBMN4NRubShAEvTsX-oMe1cP7XQ&query=${search}`);
+    console.log("search:", search);
+    const response = await fetch(`https://api.unsplash.com/search/photos/?client_id=LaLRbCj9nu7xOtOcHBMN4NRubShAEvTsX-oMe1cP7XQ&query=${search}`);
     const unsplashJSON = await response.json(); //extract JSON from the http response
     return unsplashJSON;
   }
@@ -11,9 +12,20 @@ module.exports = (app) => {
   try {
     const body = {}
     const urls = [];
-    let url;
-    url = await getImage(req.query.search);
-    urls.push(url[0].urls.regular);
+    let photoObjects;
+    
+    photoObjects = await getImage(req.params.keyword);
+
+    console.log(photoObjects);
+    photoObjects = photoObjects.results;
+
+    photoObjects.forEach((photo) => {
+      console.log(photo.urls.regular);
+      urls.push(photo.urls.regular);
+    });
+    
+     
+    
     
     if (urls.length == 0) {
       const err = new Error('Images not found');

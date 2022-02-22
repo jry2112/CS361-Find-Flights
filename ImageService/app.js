@@ -11,10 +11,9 @@ app.use(logger('tiny'));
 
 app.use(express.urlencoded({ extended: true }));
 
-
 app.listen(PORT, () => {
   console.log(`Express Server started on Port ${PORT}`);
-  require("../images")(app);
+  require("./images.js")(app);
     app.use((req, res, next) => {
         const err = new Error(`${req.method} ${req.url} Not Found`);
         err.status = 404;
