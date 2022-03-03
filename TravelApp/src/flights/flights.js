@@ -23,6 +23,7 @@ app.use(express.static("public"));
 mongoose.connect(`mongodb+srv://${user}:${password}@travelcluster.qcf2r.mongodb.net/${database}?retryWrites=true&w=majority`,
  {useNewUrlParser: true});
 
+
 app.listen(port, () => {
   console.log(`Server started on port ${port}`);
   console.log(`Connected to db ${database}`);

@@ -1,4 +1,4 @@
-<body>
+
   <main>
     <!--Header Section-->
     <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
@@ -24,17 +24,72 @@
             <i class="fas me-2"></i>Search by Origin
           </button>
           <button class="nav-link mb-3" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">
-            <i class="fas me-2"></i>View Deals</button></div>
+            <i class="fas me-2"></i>View Deals
+          </button>
+        </div>
       </nav>
       <div class="tab-content mt-3" id="nav-tabContent">
         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-          <p>Enter an IATA or select a location on the map to autosearch.</p>
+          <div class="container-sm">
+            <div class="my-2 card">
+              <div class="card-body">
+                <h5 class="card-title">Origin</h5>
+                <div class="row">
+                  <div class="col-sm">
+                    <div class="mb-4">
+                      <form class="row align-items-center" action="/deals/search" method="GET">
+                        <label id="origin-label" for="origin-input" class="form-label">Enter a city to begin search</label>
+                        <div class="input-group">
+                        <span class="input-group-text"><i class="bi-pin-map"></i> </span>
+                        <input type="text" class="form-control" list="origin-options" id="origin-input" placeholder="Location" aria-describedby="origin-label" name="originIATA"/>
+                        <datalist id="origin-options"></datalist>
+
+                        <button class="btn btn-danger" type="submit">Find Deal</button>
+                         
+                    </form>
+                  </div>
+                </div>
+                <div class="row">
+                  <iframe 
+                        width="600"
+                        height="450" 
+                        style="border:0" 
+                        loading="lazy" 
+                        allowfullscreen
+                        src="https://www.google.com/maps/embed/v1/view?zoom=13&center=40.7769,-73.8740&key=AIzaSyA8HYuusyZDjNt1yjXABwqpOpalqL94kEk">
+                      </iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button id="search-button" class="w-100 btn btn-primary" disabled>
+          Search
+        </button>
+      </div>
+          
+          <!-- <p>Enter an IATA or select a location on the map to autosearch.</p>
           <form class="row align-items-center" action="/deals/search" method="GET">
+                                  <label id="origin-label" for="origin-input" class="form-label"
+                        >IATA Code</label>
+                      <div class="input-group">
+                        <span class="input-group-text"><i class="bi-pin-map"></i> </span>
+                        <input type="text" class="form-control" list="origin-options" id="origin-input" placeholder="Location" aria-describedby="origin-label"/>
+                        <datalist id="origin-options"></datalist>
+
               <input id="pac-input" name="originIATA" class="controls form-control" type="text" placeholder="Enter an airport IATA code (NYC, PDX, etc)"/ maxlength="3">
               <button class="btn btn-danger" type="submit">Find Deal</button>
-              <div id="map"></div>
-          </form>
-        </div>
+              <iframe 
+              width="600"
+              height="450" 
+              style="border:0" 
+              loading="lazy" 
+              allowfullscreen
+              src="https://www.google.com/maps/embed/v1/view?zoom=13&center=40.7769,-73.8740&key=AIzaSyA8HYuusyZDjNt1yjXABwqpOpalqL94kEk">
+            </iframe> 
+            
+          </form> -->
+    </div>
         <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
           <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 justify-content-center">
             <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
@@ -136,6 +191,5 @@
           </div>
         </div>
       </div>
-    
   </main>
-</body>
+  
