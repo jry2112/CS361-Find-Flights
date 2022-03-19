@@ -23,8 +23,8 @@ module.exports =(app) =>{
         type: 'flight-destination',
         origin: 'MAD',
         destination: 'CUN',
-        departureDate: '2022-02-28',
-        returnDate: '2022-03-08',
+        departureDate: '2022-03-19',
+        returnDate: '2022-03-22',
         price: { total: '370.27' },
         links: {
           flightDates: 'https://test.api.amadeus.com/v1/shopping/flight-dates?origin=MAD&destination=CUN&departureDate=2022-02-15,2022-03-01&oneWay=false&duration=1,15&nonStop=false&viewBy=DURATION',

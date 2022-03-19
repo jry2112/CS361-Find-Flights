@@ -33,7 +33,6 @@ mongoose.connect(`mongodb+srv://${user}:${password}@travelcluster.qcf2r.mongodb.
 app.listen(port, () => {
   require("./src/main/main.routes.js")(app);
   require("./src/flights/flights.routes.js")(app);
-  require("./src/deals/deals.routes.js")(app);
   console.log(`Server started on port ${port}`);
   console.log(`Connected to db ${database}`);
 });

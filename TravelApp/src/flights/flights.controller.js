@@ -19,8 +19,7 @@ module.exports.findFlight = (req, res) => {
     now = now.toISOString().substring(0,10);
     
     amadeus.shopping.flightDestinations.get({ 
-        origin: String(iata), 
-        departureDate: `${now},${later}` 
+        origin: String(iata),  
     }).then(function (data) { 
         let flightData = parseAmadeus(JSON.parse(data.body));    
         
