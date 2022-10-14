@@ -4,8 +4,8 @@ This microservice generates a list of relevant images based on a provided keywor
 
 ### Instructions
 1) Run on desired localhost port (default is 3000)
-2) navigate to http://localhost:3000/api/v1/images/<keyword>
-    Examples: http://localhost:3000/api/v1/images/apple; http://localhost:3000/api/v1/images/apple%20pie
+2) navigate to http://localhost:3000/api/v1/images/keyword  
+    **Examples**: http://localhost:3000/api/v1/images/apple; http://localhost:3000/api/v1/images/apple%20pie
 3) Access results:
 Response body includes a JSON object containing the top 10 results for a given search term
 
