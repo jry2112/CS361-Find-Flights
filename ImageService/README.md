@@ -1,4 +1,6 @@
-# Image Generator
+# Unsplah Image Generator
+
+This microservice generates a list of relevant images based on a provided keyword using [Unsplash's Image API]([url](https://unsplash.com/documentation)).
 
 ### Instructions
 1) Run on desired localhost port (default is 3000)
@@ -7,7 +9,7 @@
 3) Access results:
 Response body includes a JSON object containing the top 10 results for a given search term
 
-    Example:
+### Sample Results
 
     {"urls":
         ["https://images.unsplash.com/photo-1568571780765-9276ac8b75a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&     ixid=MnwzMDE2NTB8MHwxfHNlYXJjaHwxfHxhcHBsZSUyMHBpZXxlbnwwfHx8fDE2NDU0OTA1NTI&ixlib=rb-1.2.1&q=80&w=1080",
